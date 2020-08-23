@@ -1,0 +1,126 @@
+$font-type: Helvetica, san-serif;
+$font-color: #d8d8d8;
+$font-active: #fffebb;
+$background-color: #161616;
+$logo-color: white;
+$menu-background-color: black;
+$font-size: 1em;
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font: 100% $font-type;
+    overflow-x:hidden;
+    background-color: $background-color;
+    height:100%;
+}
+
+// top navigation bar 
+header {
+    width: 100%;
+    background-color: transparent;
+    position: absolute;
+
+// Logo styling     
+    .logo-container{
+        width: 100vw;
+        img{
+            width: 20%;
+            max-width: 160px;
+            padding: 0.1em;
+        }
+    }
+// Hamburger menu styling 
+    .burger div{
+        display: block;
+        width: 5vw;
+        max-width: 50px;
+        min-width: 25px;
+        height: 4px;
+        background-color: $font-color;
+        margin: 5px;
+        transition: all 0.3s ease;
+    }
+    .burger{
+        padding: 1em;
+        padding-right: .5em;
+        position: fixed;
+        z-index: 110;
+    }
+// menu styling and animations
+    .menu-container{
+        display:flex;
+        flex-direction:row;
+        .burger-logo-container{
+            width: 100vw;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+        }
+        .nav{
+            position: absolute;
+            z-index: 100;
+            position: fixed;
+            display:flex;
+            height:100vh;
+            width: 75vw;
+            top: 0;
+            right: 0;
+            align-items:center;
+            justify-content: center;
+            flex-direction: column;
+            background-color: $menu-background-color;
+            opacity: 0.8;
+            transform: translateX(100%);
+            transition: transform 0.5s ease-in; 
+        }
+        ul{
+            li{
+                opacity: 0;
+                a:hover{
+                    font-weight:bold;
+                    font-size: $font-active;
+                }
+                list-style: none;
+                padding: 10vh 0 10vh 0;
+                }
+                a{
+                    color: $font-color;
+                    text-decoration: none;
+                    letter-spacing: 2px;
+                    font-size: $font-size;
+            }
+        }
+        .nav-active{
+            transform: translateX(0%)
+        }
+
+        @keyframes navLinkFade{
+            from{
+                opacity: 0;
+                transform: translateX(50px);
+            }
+
+            to{
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+    }
+
+    .toggle .line1{
+        transform: rotate(-45deg) translate(-5px,6px);
+        background-color: white;
+    }
+    .toggle .line2{
+        opacity: 0;
+    }
+    .toggle .line3{
+        transform: rotate(45deg) translate(-5px,-6px);
+        background-color: white;
+    }
+}
