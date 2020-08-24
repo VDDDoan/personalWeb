@@ -10,6 +10,7 @@ body {
   overflow-x: hidden;
   background-color: #161616;
   height: 100%;
+  display: block;
 }
 
 header {
@@ -165,5 +166,89 @@ header .toggle .line3 {
   -webkit-transform: rotate(45deg) translate(-5px, -6px);
           transform: rotate(45deg) translate(-5px, -6px);
   background-color: white;
+}
+
+.body-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.body-container .name {
+  border: 2px white solid;
+  margin-top: 20vw;
+}
+
+.body-container .name p {
+  color: #d8d8d8;
+}
+
+.body-container .name .cls-1 {
+  fill: #fff;
+  fill-opacity: 0;
+  stroke: #ebe489;
+  stroke-linejoin: round;
+  stroke-width: 13px;
+  fill-rule: evenodd;
+}
+
+.body-container .name .top-sentence {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.body-container .name #name-sentence-1, .body-container .name #name-sentence-2 {
+  font-size: 9vw;
+}
+
+.body-container .name #name-sentence-2 {
+  margin-left: 4vw;
+}
+
+.body-container .name #name-svg {
+  margin: 0 0 0 4vw;
+  width: 69vw;
+}
+
+.body-container .icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.body-container .icons p {
+  color: #d8d8d8;
+}
+
+.body-container .icons .icon-svg {
+  width: 15vw;
+  fill: white;
 }
 /*# sourceMappingURL=mobile.css.map */

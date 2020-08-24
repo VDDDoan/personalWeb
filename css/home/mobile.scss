@@ -17,6 +17,7 @@ body {
     overflow-x:hidden;
     background-color: $background-color;
     height:100%;
+    display: block;
 }
 
 // top navigation bar 
@@ -123,4 +124,60 @@ header {
         transform: rotate(45deg) translate(-5px,-6px);
         background-color: white;
     }
+}
+
+.body-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+
+    .name{
+        border: 2px white solid;
+        margin-top:20vw;
+        p{
+            color: $font-color;
+        }
+        .cls-1 {
+            fill: #fff;
+            fill-opacity: 0;
+            stroke: #ebe489;
+            stroke-linejoin: round;
+            stroke-width: 13px;
+            fill-rule: evenodd;
+          }
+        .top-sentence{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+        }
+        #name-sentence-1, #name-sentence-2{
+            font-size: 9vw;
+        }
+        #name-sentence-2{
+            margin-left: 4vw;
+        }
+        
+        #name-svg{
+            margin:0 0 0 4vw;
+            width: 69vw;
+        }
+    }
+
+    .icons{
+        display: flex;
+        flex-direction: column;
+        p{
+            color: $font-color;
+        }
+        .icon-svg{
+            width: 15vw;
+            fill: white;
+        }
+    }
+
 }
