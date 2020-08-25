@@ -213,12 +213,15 @@ header .toggle .line3 {
 }
 
 .body-container .name .cls-1 {
-  fill: #fff;
-  fill-opacity: 0;
   stroke: #ebe489;
   stroke-linejoin: round;
   stroke-width: 13px;
   fill-rule: evenodd;
+}
+
+.body-container .name #name-svg {
+  fill: #fff;
+  fill-opacity: 0;
 }
 
 .body-container .name .top-sentence {
@@ -258,9 +261,13 @@ header .toggle .line3 {
 .body-container .name button {
   font-size: 5vw;
   background-color: black;
-  border: solid white 3px;
+  border: solid #d8d8d8 2px;
   width: 40vw;
   margin-top: 5vw;
+}
+
+.body-container .name button:hover {
+  background-color: #1e1e1e;
 }
 
 @-webkit-keyframes line-anim {
@@ -277,19 +284,21 @@ header .toggle .line3 {
 
 @-webkit-keyframes fill {
   from {
-    fill: transparent;
+    fill-opacity: 0;
   }
   to {
-    fill: white;
+    fill: #ebe489;
+    fill-opacity: 1;
   }
 }
 
 @keyframes fill {
   from {
-    fill: transparent;
+    fill-opacity: 0;
   }
   to {
-    fill: white;
+    fill: #ebe489;
+    fill-opacity: 1;
   }
 }
 
@@ -301,9 +310,9 @@ header .toggle .line3 {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -316,5 +325,49 @@ header .toggle .line3 {
 .body-container .icons .icon-svg {
   width: 15vw;
   fill: white;
+  stroke: white;
+}
+
+.body-container .icons .icon-svg:hover {
+  stroke-dasharray: 10;
+  stroke-dashoffset: 100;
+  -webkit-animation: move 2s linear infinite;
+          animation: move 2s linear infinite;
+  stroke: #ebe489;
+}
+
+@-webkit-keyframes move {
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes move {
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+.body-container .cls-2 {
+  fill-opacity: 0;
+  stroke-linejoin: round;
+  stroke-width: 28px;
+  fill-rule: evenodd;
+}
+
+.body-container .cls-3 {
+  fill-opacity: 0;
+  stroke: white;
+  stroke-linejoin: round;
+  stroke-width: 12px;
+  fill-rule: evenodd;
+}
+
+.body-container .cls-4 {
+  fill-opacity: 0;
+  stroke: white;
+  stroke-linejoin: round;
+  stroke-width: 18px;
+  fill-rule: evenodd;
 }
 /*# sourceMappingURL=mobile.css.map */

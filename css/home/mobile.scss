@@ -5,6 +5,7 @@ $background-color: #161616;
 $logo-color: white;
 $menu-background-color: black;
 $font-size: 1em;
+$name-color: #ebe489;
 
 *{
     margin: 0;
@@ -148,13 +149,15 @@ header {
             color: $font-color;
         }
         .cls-1 {
-            fill: #fff;
-            fill-opacity: 0;
             stroke: #ebe489;
             stroke-linejoin: round;
             stroke-width: 13px;
             fill-rule: evenodd;
           }
+        #name-svg{
+            fill: #fff;
+            fill-opacity: 0;
+        }
         .top-sentence{
             display: flex;
             flex-direction: row;
@@ -179,9 +182,12 @@ header {
         button{
             font-size: 5vw;
             background-color: black;
-            border: solid white 3px;
+            border: solid $font-color 2px;
             width: 40vw;
             margin-top: 5vw;
+        }
+        button:hover{
+            background-color:rgb(30, 30, 30);
         }
     }
     @keyframes line-anim {
@@ -191,10 +197,11 @@ header {
     }
     @keyframes fill {
         from {
-            fill: transparent;
+            fill-opacity: 0;
         }
         to {
-            fill: white;
+            fill: #ebe489;
+            fill-opacity: 1;
         }
     }
 
@@ -203,7 +210,7 @@ header {
     .icons{
         display: flex;
         flex-direction: row;
-        justify-content: center;
+        justify-content: space-evenly;
         align-items: center;
         p{
             color: $font-color;
@@ -211,8 +218,42 @@ header {
         .icon-svg{
             width: 15vw;
             fill: white;
+            stroke: white;
+        }
+        .icon-svg:hover{
+            stroke-dasharray: 10; 
+            stroke-dashoffset: 100;
+            animation: move 2s linear infinite; 
+            stroke: $name-color
         }
 
+        @keyframes move{
+            100% {
+                stroke-dashoffset: 0;
+            }
+        }
+
+    }
+
+    .cls-2{
+        fill-opacity: 0;
+        stroke-linejoin: round;
+        stroke-width: 28px;
+        fill-rule: evenodd;
+    }
+    .cls-3{
+        fill-opacity: 0;
+        stroke: white;
+        stroke-linejoin: round;
+        stroke-width: 12px;
+        fill-rule: evenodd;
+    }
+    .cls-4{
+        fill-opacity: 0;
+        stroke: white;
+        stroke-linejoin: round;
+        stroke-width: 18px;
+        fill-rule: evenodd;
     }
 
 }
