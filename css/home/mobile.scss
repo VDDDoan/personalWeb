@@ -130,14 +130,20 @@ header {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-
+    .name-container{
+        height: 70vh;
+        margin-top: 10vh;
+        position: relative;
+    }
     .name{
-        border: 2px white solid;
-        margin-top:20vw;
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
         p{
             color: $font-color;
         }
@@ -166,11 +172,39 @@ header {
             margin:0 0 0 4vw;
             width: 69vw;
         }
+        #name-sentence-3{
+            font-size: 4.5vw;
+            margin: 0 0 5vw 0;
+        }
+        button{
+            font-size: 5vw;
+            background-color: black;
+            border: solid white 3px;
+            width: 40vw;
+            margin-top: 5vw;
+        }
     }
+    @keyframes line-anim {
+        to{
+            stroke-dashoffset: 0;
+        }
+    }
+    @keyframes fill {
+        from {
+            fill: transparent;
+        }
+        to {
+            fill: white;
+        }
+    }
+
+
 
     .icons{
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
         p{
             color: $font-color;
         }
@@ -178,6 +212,7 @@ header {
             width: 15vw;
             fill: white;
         }
+
     }
 
 }
