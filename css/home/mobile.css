@@ -324,8 +324,10 @@ header .toggle .line3 {
 
 .body-container .icons .icon-svg {
   width: 15vw;
-  fill: white;
   stroke: white;
+  fill-opacity: 0;
+  stroke-linejoin: round;
+  fill-rule: evenodd;
 }
 
 .body-container .icons .icon-svg:hover {
@@ -349,25 +351,48 @@ header .toggle .line3 {
 }
 
 .body-container .cls-2 {
-  fill-opacity: 0;
-  stroke-linejoin: round;
   stroke-width: 28px;
-  fill-rule: evenodd;
 }
 
 .body-container .cls-3 {
-  fill-opacity: 0;
-  stroke: white;
-  stroke-linejoin: round;
   stroke-width: 12px;
-  fill-rule: evenodd;
 }
 
 .body-container .cls-4 {
-  fill-opacity: 0;
-  stroke: white;
-  stroke-linejoin: round;
   stroke-width: 18px;
-  fill-rule: evenodd;
+}
+
+@media screen and (max-height: 450px) {
+  header .logo-container img {
+    width: 20%;
+    max-width: 100px;
+    padding: 0.1em;
+    margin: 5px;
+  }
+  .body-container .name-container {
+    margin-top: 15vh;
+    height: 60vh;
+  }
+  .body-container .name-container .name #name-sentence-1, .body-container .name-container .name #name-sentence-2 {
+    font-size: 10vh;
+  }
+  .body-container .name-container .name #name-sentence-2 {
+    margin-left: 4vh;
+  }
+  .body-container .name-container .name #name-svg {
+    width: 70vh;
+    margin-left: 4vh;
+  }
+  .body-container .name-container .name #name-sentence-3 {
+    font-size: 4vh;
+  }
+  .body-container .name-container .name button {
+    font-size: 5vh;
+    width: 40vh;
+    margin-top: 0;
+  }
+  .body-container .icons .icon-svg {
+    width: 15vh;
+  }
 }
 /*# sourceMappingURL=mobile.css.map */

@@ -36,6 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
             delay+=delayIncrement;
             console.log(delay)
         }
+        delay = delay*1.4;
         logo.style.animation = `fill 0.5s ease forwards ${delay}s`;
     }
     animateSgv('name-svg', 1, 0.3)
