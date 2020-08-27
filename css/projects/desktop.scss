@@ -1,0 +1,138 @@
+$name-color: #ebe489;
+
+@media screen and (min-height: 451px) and (min-width: 600px){
+    header{
+        .logo-container{
+            img{
+                margin: 3vh;
+            }
+        }
+        .burger-logo-container{
+            margin-left: -15px;
+        }
+    }
+    .title{
+        font-size: clamp(10px, 2vw, 30px);
+        a{
+            font-size: clamp(10px, 2vw, 30px);
+        }
+        margin: 10px 0 10px 0;
+    }
+
+    .project-container{
+        height:40vw;
+        width: 70vw;
+        max-width: 910px;
+        max-height: 550px;
+        transform: translate(-50%,-53%);
+        p{
+            font-size: clamp(8px, 1.5vw, 15px);
+            margin: 0 0.75vw 0 0.75vw;
+        }
+    }
+
+    .links{
+        a{
+            font-size: clamp(7px, 1.3vw, 13px);
+        }
+        button{
+            padding: clamp(2px, 0.5vw, 5px);
+            margin: 0;
+            margin-right: 20px;
+        }
+        margin-top: 25px;
+    }
+
+    .tech-container{
+        margin: 0 -0.75vw 0.5vw 0;
+       
+    }
+
+    .tech{
+        font-size: clamp(5px, 1.1vw, 11px);
+        padding: clamp(2px, 0.5vw, 5px);
+        margin: 5px;
+    }
+
+    .planpacific-container, .match-container, .website-container{
+        display: flex;
+        flex-direction: row;
+    }
+
+    .match-container, .website-container{
+        margin-top:2vh;
+    }
+
+    .description, .pp-carousel{
+        width: 35vw;
+        max-width: 455px;
+        margin-top: 0;
+    }
+
+    .pp-carousel{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 35vw;
+        max-width: 455px;
+    }
+
+    .slideshow-container, .video-container{
+        width: 35vw;
+        max-width: 455px;
+        height: 40vw;
+        max-height: 350px;
+        img,video{
+            max-height: 349px;
+            height: 25vw;
+        }
+    }
+    svg{
+        max-height: 350px;
+    }
+
+    .icons{
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        transform: translate(0,-20%);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+
+        .icon-svg{
+            width: 4.5vw;
+            max-width: 45px;
+            stroke: white;
+            fill-opacity: 0;
+            stroke-linejoin: round;
+            fill-rule: evenodd;
+            margin: 5px 0 5px 45px;
+        }
+        .icon-svg:hover{
+            stroke-dasharray: 10; 
+            stroke-dashoffset: 100;
+            animation: move 2s linear infinite; 
+            stroke: $name-color
+        }
+
+        @keyframes move{
+            100% {
+                stroke-dashoffset: 0;
+            }
+        }
+
+    }
+
+    .cls-2{
+        stroke-width: 28px;
+    }
+    .cls-3{
+        stroke-width: 12px;
+    }
+    .cls-4{
+        stroke-width: 18px;
+    }
+
+}

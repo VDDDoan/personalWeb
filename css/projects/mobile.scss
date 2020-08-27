@@ -143,22 +143,23 @@ header {
     p{
         color: $font-color;
         font-size: 4vw;
-        margin: 0 1vw 0 1vw;
+        margin: 0 3vw 0 3vw;
     }
 }
 
 .title{
-
+    color: white;
+    font-size: 5vw;
     a{
         text-decoration:none;
         color: white;
         font-size: 5vw;
     }
-    margin-bottom: 5vw;
+    margin: 5vw 0 5vw 0;
 }
 
 .description{
-    height: 50vh;
+    height: auto;
     width: 80vw;
     border: 1px solid white;
     display:flex;
@@ -195,7 +196,7 @@ header {
 
 .tech{
     border: 1px rgb(143, 143, 143) solid;
-    background-color: rgb(141, 141, 141);
+    background-color: rgb(173, 173, 173);
     font-size: 3vw;
     margin: 0 0 1vw 2vw;
     padding: 1vw;
@@ -208,11 +209,11 @@ header {
     margin-top: 5vw;
 }
 
- .slideshow-container{
+ .slideshow-container, .video-container{
     width: 79vw;
     position: relative;
     height: 80vw;
-    img{
+    img, video{
         position:absolute;
         top: 50%;
         left:50%;
@@ -254,4 +255,92 @@ header {
 @keyframes fade{
     from{opacity: .4}
     to{opacity: 1}
+}
+
+.cls-10 {
+    fill: #fff;
+  }
+
+  .cls-10, .cls-20 {
+    fill-rule: evenodd;
+  }
+
+  .cls-20 {
+    fill: none;
+    stroke: #fff;
+    stroke-width: 20px;
+  }
+.icons{
+    display: none;
+}
+@media screen and (max-height: 450px){
+    header{
+        .logo-container{
+            img{
+                width: 20%;
+                max-width: 100px;
+                padding: 0.1em;
+                margin: 5px;
+            }
+        }
+    }
+    .title{
+        font-size: 5.25vh;
+        a{
+            font-size: 5.25vh;
+        }
+        margin: 5vh 0 5vh 0;
+    }
+
+    .project-container{
+        height: 65vh;
+        width: 80vw;
+        transform: translate(-50%,-50%);
+        p{
+            font-size: 4vh;
+        }
+    }
+
+    .links{
+        a{
+            font-size: 4vh;
+        }
+    }
+
+    .tech-container{
+        margin: 0 0 5vh 0;
+    }
+
+    .tech{
+        font-size: 3vh;
+    }
+
+    .planpacific-container, .match-container, .website-container{
+        display: flex;
+        flex-direction: row;
+    }
+
+    .match-container, .website-container{
+        margin-top:2vh;
+    }
+
+    .description, .pp-carousel{
+        width: 40vw;
+        margin-top: 0;
+    }
+
+    .pp-carousel{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .slideshow-container, .video-container{
+        width: 39vw;
+        height: 40vw;
+        img,video{
+            max-height: 65vh;
+        }
+    }
+
 }

@@ -1,1 +1,146 @@
-/* No CSS *//*# sourceMappingURL=desktop.css.map */
+@media screen and (min-height: 451px) and (min-width: 600px) {
+  header .logo-container img {
+    margin: 3vh;
+  }
+  header .burger-logo-container {
+    margin-left: -15px;
+  }
+  .title {
+    font-size: clamp(10px, 2vw, 30px);
+    margin: 10px 0 10px 0;
+  }
+  .title a {
+    font-size: clamp(10px, 2vw, 30px);
+  }
+  .project-container {
+    height: 40vw;
+    width: 70vw;
+    max-width: 910px;
+    max-height: 550px;
+    -webkit-transform: translate(-50%, -53%);
+            transform: translate(-50%, -53%);
+  }
+  .project-container p {
+    font-size: clamp(8px, 1.5vw, 15px);
+    margin: 0 0.75vw 0 0.75vw;
+  }
+  .links {
+    margin-top: 25px;
+  }
+  .links a {
+    font-size: clamp(7px, 1.3vw, 13px);
+  }
+  .links button {
+    padding: clamp(2px, 0.5vw, 5px);
+    margin: 0;
+    margin-right: 20px;
+  }
+  .tech-container {
+    margin: 0 -0.75vw 0.5vw 0;
+  }
+  .tech {
+    font-size: clamp(5px, 1.1vw, 11px);
+    padding: clamp(2px, 0.5vw, 5px);
+    margin: 5px;
+  }
+  .planpacific-container, .match-container, .website-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .match-container, .website-container {
+    margin-top: 2vh;
+  }
+  .description, .pp-carousel {
+    width: 35vw;
+    max-width: 455px;
+    margin-top: 0;
+  }
+  .pp-carousel {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 35vw;
+    max-width: 455px;
+  }
+  .slideshow-container, .video-container {
+    width: 35vw;
+    max-width: 455px;
+    height: 40vw;
+    max-height: 350px;
+  }
+  .slideshow-container img, .slideshow-container video, .video-container img, .video-container video {
+    max-height: 349px;
+    height: 25vw;
+  }
+  svg {
+    max-height: 350px;
+  }
+  .icons {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    -webkit-transform: translate(0, -20%);
+            transform: translate(0, -20%);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .icons .icon-svg {
+    width: 4.5vw;
+    max-width: 45px;
+    stroke: white;
+    fill-opacity: 0;
+    stroke-linejoin: round;
+    fill-rule: evenodd;
+    margin: 5px 0 5px 45px;
+  }
+  .icons .icon-svg:hover {
+    stroke-dasharray: 10;
+    stroke-dashoffset: 100;
+    -webkit-animation: move 2s linear infinite;
+            animation: move 2s linear infinite;
+    stroke: #ebe489;
+  }
+  @-webkit-keyframes move {
+    100% {
+      stroke-dashoffset: 0;
+    }
+  }
+  @keyframes move {
+    100% {
+      stroke-dashoffset: 0;
+    }
+  }
+  .cls-2 {
+    stroke-width: 28px;
+  }
+  .cls-3 {
+    stroke-width: 12px;
+  }
+  .cls-4 {
+    stroke-width: 18px;
+  }
+}
+/*# sourceMappingURL=desktop.css.map */
