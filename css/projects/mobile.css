@@ -383,10 +383,10 @@ header .toggle .line3 {
     font-size: 5.25vh;
   }
   .project-container {
-    height: 65vh;
+    height: 60vh;
     width: 80vw;
-    -webkit-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -40%);
+            transform: translate(-50%, -40%);
   }
   .project-container p {
     font-size: 4vh;

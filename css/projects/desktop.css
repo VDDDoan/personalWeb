@@ -10,7 +10,7 @@
     margin: 10px 0 10px 0;
   }
   .title a {
-    font-size: clamp(10px, 2vw, 30px);
+    font-size: clamp(10px, 2vw, 28px);
   }
   .project-container {
     height: 40vw;
@@ -25,7 +25,7 @@
     margin: 0 0.75vw 0 0.75vw;
   }
   .links {
-    margin-top: 25px;
+    margin: 25px 0 25px 0;
   }
   .links a {
     font-size: clamp(7px, 1.3vw, 13px);
@@ -36,7 +36,7 @@
     margin-right: 20px;
   }
   .tech-container {
-    margin: 0 -0.75vw 0.5vw 0;
+    margin: 0 0 0.5vw 1vw;
   }
   .tech {
     font-size: clamp(5px, 1.1vw, 11px);

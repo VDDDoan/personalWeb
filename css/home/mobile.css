@@ -213,7 +213,7 @@ header .toggle .line3 {
 }
 
 .body-container .name .cls-1 {
-  stroke: #ebe489;
+  stroke: #dd0000;
   stroke-linejoin: round;
   stroke-width: 13px;
   fill-rule: evenodd;
@@ -287,7 +287,7 @@ header .toggle .line3 {
     fill-opacity: 0;
   }
   to {
-    fill: #ebe489;
+    fill: #dd0000;
     fill-opacity: 1;
   }
 }
@@ -297,7 +297,7 @@ header .toggle .line3 {
     fill-opacity: 0;
   }
   to {
-    fill: #ebe489;
+    fill: #dd0000;
     fill-opacity: 1;
   }
 }
@@ -335,7 +335,7 @@ header .toggle .line3 {
   stroke-dashoffset: 100;
   -webkit-animation: move 2s linear infinite;
           animation: move 2s linear infinite;
-  stroke: #ebe489;
+  stroke: red;
 }
 
 @-webkit-keyframes move {

@@ -5,7 +5,8 @@ $background-color: #161616;
 $logo-color: white;
 $menu-background-color: black;
 $font-size: 1em;
-$name-color: #ebe489;
+$name-color: red;
+$name-svg: rgb(221, 0, 0);
 
 *{
     margin: 0;
@@ -149,7 +150,7 @@ header {
             color: $font-color;
         }
         .cls-1 {
-            stroke: #ebe489;
+            stroke: $name-svg;
             stroke-linejoin: round;
             stroke-width: 13px;
             fill-rule: evenodd;
@@ -200,7 +201,7 @@ header {
             fill-opacity: 0;
         }
         to {
-            fill: #ebe489;
+            fill: $name-svg;
             fill-opacity: 1;
         }
     }
