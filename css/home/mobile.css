@@ -8,8 +8,8 @@
 body {
   font: 100% Helvetica, san-serif;
   overflow-x: hidden;
-  background-image: -webkit-gradient(linear, left top, right bottom, from(#131352), to(black));
-  background-image: linear-gradient(to bottom right, #131352, black);
+  background: -webkit-gradient(linear, left top, right bottom, from(#131352), to(black));
+  background: linear-gradient(to bottom right, #131352, black);
   height: 100vh;
   display: block;
 }
@@ -275,6 +275,8 @@ header .toggle .line3 {
   color: #e0b25c;
   -webkit-animation: animate 7s linear infinite;
           animation: animate 7s linear infinite;
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
 }
 
 @-webkit-keyframes animate {
@@ -368,6 +370,7 @@ header .toggle .line3 {
 
 .body-container .name button:hover {
   background-color: #1e1e1e;
+  cursor: pointer;
 }
 
 @-webkit-keyframes line-anim {
@@ -402,7 +405,23 @@ header .toggle .line3 {
   }
 }
 
-.body-container .icons {
+.icons {
+  position: absolute;
+  bottom: 10%;
+  left: 0;
+  -webkit-transform: translateX(-130px);
+          transform: translateX(-130px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.icons button {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -410,31 +429,104 @@ header .toggle .line3 {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-color: rgba(0, 0, 0, 0.75);
+  -webkit-animation-name: out;
+          animation-name: out;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
 }
 
-.body-container .icons p {
+.icons button:hover {
+  cursor: pointer;
+  -webkit-animation-name: in;
+          animation-name: in;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-play-state: running;
+          animation-play-state: running;
+}
+
+@-webkit-keyframes out {
+  from {
+    -webkit-transform: translateX(130px);
+            transform: translateX(130px);
+  }
+  to {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+}
+
+@keyframes out {
+  from {
+    -webkit-transform: translateX(130px);
+            transform: translateX(130px);
+  }
+  to {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+}
+
+@-webkit-keyframes in {
+  from {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+  to {
+    -webkit-transform: translateX(130px);
+            transform: translateX(130px);
+  }
+}
+
+@keyframes in {
+  from {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+  to {
+    -webkit-transform: translateX(130px);
+            transform: translateX(130px);
+  }
+}
+
+.icons .button-container {
+  position: relative;
+  width: 175px;
+}
+
+.icons .button-container p {
   color: #d8d8d8;
+  margin-left: 5px;
+  width: 125px;
+  left: 0;
 }
 
-.body-container .icons .icon-svg {
-  width: 15vw;
+.icons .button-container svg {
+  right: 0;
+}
+
+.icons .icon-svg {
   stroke: white;
   fill-opacity: 0;
   stroke-linejoin: round;
   fill-rule: evenodd;
+  width: 50px;
 }
 
-.body-container .icons .icon-svg:hover {
+.icons .icon-svg:hover {
   stroke-dasharray: 10;
   stroke-dashoffset: 100;
-  -webkit-animation: move 2s linear infinite;
-          animation: move 2s linear infinite;
+  -webkit-animation: move 4s linear infinite;
+          animation: move 4s linear infinite;
   stroke: #ebe489;
 }
 
@@ -450,15 +542,15 @@ header .toggle .line3 {
   }
 }
 
-.body-container .cls-2 {
+.cls-2 {
   stroke-width: 28px;
 }
 
-.body-container .cls-3 {
+.cls-3 {
   stroke-width: 12px;
 }
 
-.body-container .cls-4 {
+.cls-4 {
   stroke-width: 18px;
 }
 
@@ -561,6 +653,11 @@ header .toggle .line3 {
       -webkit-transform: translateY(-13.8vh);
               transform: translateY(-13.8vh);
     }
+  }
+  .body-container .icons {
+    top: -50%;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
   }
   .body-container .icons .icon-svg {
     width: 15vh;

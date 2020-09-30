@@ -40,12 +40,8 @@
                 }
             }
         }
-        .icons{
-            .icon-svg{
-                width: 10vh;
-            }
-        }
     }
+
     @keyframes animate{
         0%{
             transform: translateY(.5vh);
@@ -72,6 +68,11 @@
             transform: translateY(-13.8vh);
         }
     }
-
+    .icons{
+        position: absolute;
+        top: 60%;
+        left: 0;
+        transform: translate(-130px, -50%);
+    }
 
 }

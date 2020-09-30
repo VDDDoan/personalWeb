@@ -33,9 +33,6 @@
   .body-container .name-container .name .rotate-text {
     height: 4.5vh;
   }
-  .body-container .icons .icon-svg {
-    width: 10vh;
-  }
   @-webkit-keyframes animate {
     0% {
       -webkit-transform: translateY(0.5vh);
@@ -103,6 +100,13 @@
       -webkit-transform: translateY(-13.8vh);
               transform: translateY(-13.8vh);
     }
+  }
+  .icons {
+    position: absolute;
+    top: 60%;
+    left: 0;
+    -webkit-transform: translate(-130px, -50%);
+            transform: translate(-130px, -50%);
   }
 }
 /*# sourceMappingURL=desktop.css.map */
