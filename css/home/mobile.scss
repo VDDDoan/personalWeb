@@ -16,8 +16,8 @@ $name-color: #ebe489;
 body {
     font: 100% $font-type;
     overflow-x:hidden;
-    background-color: $background-color;
-    height:100%;
+    background-image: linear-gradient(to bottom right, rgb(19, 19, 82), black);
+    height:100vh;
     display: block;
 }
 
@@ -76,7 +76,7 @@ header {
             justify-content: center;
             flex-direction: column;
             background-color: $menu-background-color;
-            opacity: 0.8;
+            opacity: 0.9;
             transform: translateX(100%);
             transition: transform 0.5s ease-in; 
         }
@@ -170,6 +170,53 @@ header {
         #name-sentence-2{
             margin-left: 4vw;
         }
+        .rotate-container{
+            display: flex;
+            flex-direction: row;
+        }
+        .rotate-text{
+            overflow-y: hidden;
+            position: relative;
+            height: 5vw;
+            ul{
+                margin: 0;
+                position: relative;
+                list-style-type: none;
+                height: auto;
+                width: auto;
+                text-align: left;
+                color: rgb(224, 178, 92);
+                animation: animate 7s linear infinite;
+            }
+            
+        }
+
+        @keyframes animate{
+            0%{
+                transform: translateY(.5vw);
+            }
+            5%{
+                transform: translateY(-.5vw);
+            }
+            10%, 25%{
+                transform: translateY(0px);
+            }
+            30%{
+                transform: translateY(-5.1vw);
+            }
+            35%,60%{
+                transform: translateY(-4.6vw);
+            }
+            65%{
+                transform: translateY(-10.1vw)
+            }
+            70%,95%{
+                transform: translateY(-9.2vw);
+            }
+            100%{
+                transform: translateY(-13.8vw);
+            }
+        }
         
         #name-svg{
             margin:0 0 0 4vw;
@@ -178,6 +225,7 @@ header {
         #name-sentence-3{
             font-size: 4vw;
             margin: 0 0 5vw 0;
+            color: $font-color;
         }
         button{
             font-size: 5vw;
@@ -282,6 +330,35 @@ header {
                     font-size: 5vh;
                     width: 40vh;
                     margin-top: 0;
+                }
+                .rotate-text{
+                    height: 5vh;
+                }
+            }
+            @keyframes animate{
+                0%{
+                    transform: translateY(.5vh);
+                }
+                5%{
+                    transform: translateY(-.5vh);
+                }
+                10%, 25%{
+                    transform: translateY(0px);
+                }
+                30%{
+                    transform: translateY(-5.1vh);
+                }
+                35%,60%{
+                    transform: translateY(-4.6vh);
+                }
+                65%{
+                    transform: translateY(-10.1vh)
+                }
+                70%,95%{
+                    transform: translateY(-9.2vh);
+                }
+                100%{
+                    transform: translateY(-13.8vh);
                 }
             }
         }

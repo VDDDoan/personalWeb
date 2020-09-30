@@ -24,6 +24,9 @@
                     width: 60vh;
                     margin-left: 4vh;
                 }
+                .rotate-text{
+                    height: 4.5vh;
+                }
                 #name-sentence-3{
                     font-size: 4vh;
                 }
@@ -31,6 +34,9 @@
                     font-size: 4vh;
                     width: 35vh;
                     margin-top: 0;
+                }
+                .rotate-text{
+                    height: 4.5vh;
                 }
             }
         }
@@ -40,5 +46,32 @@
             }
         }
     }
+    @keyframes animate{
+        0%{
+            transform: translateY(.5vh);
+        }
+        5%{
+            transform: translateY(-.5vh);
+        }
+        10%, 25%{
+            transform: translateY(0px);
+        }
+        30%{
+            transform: translateY(-5.1vh);
+        }
+        35%,60%{
+            transform: translateY(-4.6vh);
+        }
+        65%{
+            transform: translateY(-10.1vh)
+        }
+        70%,95%{
+            transform: translateY(-9.2vh);
+        }
+        100%{
+            transform: translateY(-13.8vh);
+        }
+    }
+
 
 }

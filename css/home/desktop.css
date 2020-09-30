@@ -19,6 +19,9 @@
     width: 60vh;
     margin-left: 4vh;
   }
+  .body-container .name-container .name .rotate-text {
+    height: 4.5vh;
+  }
   .body-container .name-container .name #name-sentence-3 {
     font-size: 4vh;
   }
@@ -27,8 +30,79 @@
     width: 35vh;
     margin-top: 0;
   }
+  .body-container .name-container .name .rotate-text {
+    height: 4.5vh;
+  }
   .body-container .icons .icon-svg {
     width: 10vh;
+  }
+  @-webkit-keyframes animate {
+    0% {
+      -webkit-transform: translateY(0.5vh);
+              transform: translateY(0.5vh);
+    }
+    5% {
+      -webkit-transform: translateY(-0.5vh);
+              transform: translateY(-0.5vh);
+    }
+    10%, 25% {
+      -webkit-transform: translateY(0px);
+              transform: translateY(0px);
+    }
+    30% {
+      -webkit-transform: translateY(-5.1vh);
+              transform: translateY(-5.1vh);
+    }
+    35%, 60% {
+      -webkit-transform: translateY(-4.6vh);
+              transform: translateY(-4.6vh);
+    }
+    65% {
+      -webkit-transform: translateY(-10.1vh);
+              transform: translateY(-10.1vh);
+    }
+    70%, 95% {
+      -webkit-transform: translateY(-9.2vh);
+              transform: translateY(-9.2vh);
+    }
+    100% {
+      -webkit-transform: translateY(-13.8vh);
+              transform: translateY(-13.8vh);
+    }
+  }
+  @keyframes animate {
+    0% {
+      -webkit-transform: translateY(0.5vh);
+              transform: translateY(0.5vh);
+    }
+    5% {
+      -webkit-transform: translateY(-0.5vh);
+              transform: translateY(-0.5vh);
+    }
+    10%, 25% {
+      -webkit-transform: translateY(0px);
+              transform: translateY(0px);
+    }
+    30% {
+      -webkit-transform: translateY(-5.1vh);
+              transform: translateY(-5.1vh);
+    }
+    35%, 60% {
+      -webkit-transform: translateY(-4.6vh);
+              transform: translateY(-4.6vh);
+    }
+    65% {
+      -webkit-transform: translateY(-10.1vh);
+              transform: translateY(-10.1vh);
+    }
+    70%, 95% {
+      -webkit-transform: translateY(-9.2vh);
+              transform: translateY(-9.2vh);
+    }
+    100% {
+      -webkit-transform: translateY(-13.8vh);
+              transform: translateY(-13.8vh);
+    }
   }
 }
 /*# sourceMappingURL=desktop.css.map */
