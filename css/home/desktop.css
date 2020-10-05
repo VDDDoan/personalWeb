@@ -19,6 +19,9 @@
     width: 60vh;
     margin-left: 4vh;
   }
+  .body-container .name-container .name .rotate-text {
+    height: 4.5vh;
+  }
   .body-container .name-container .name #name-sentence-3 {
     font-size: 4vh;
   }
@@ -27,8 +30,134 @@
     width: 35vh;
     margin-top: 0;
   }
-  .body-container .icons .icon-svg {
-    width: 10vh;
+  .body-container .name-container .name .rotate-text {
+    height: 4.5vh;
+  }
+  @-webkit-keyframes animate {
+    0% {
+      -webkit-transform: translateY(0.5vh);
+              transform: translateY(0.5vh);
+    }
+    5% {
+      -webkit-transform: translateY(-0.5vh);
+              transform: translateY(-0.5vh);
+    }
+    10%, 25% {
+      -webkit-transform: translateY(0px);
+              transform: translateY(0px);
+    }
+    30% {
+      -webkit-transform: translateY(-5.1vh);
+              transform: translateY(-5.1vh);
+    }
+    35%, 60% {
+      -webkit-transform: translateY(-4.6vh);
+              transform: translateY(-4.6vh);
+    }
+    65% {
+      -webkit-transform: translateY(-10.1vh);
+              transform: translateY(-10.1vh);
+    }
+    70%, 95% {
+      -webkit-transform: translateY(-9.2vh);
+              transform: translateY(-9.2vh);
+    }
+    100% {
+      -webkit-transform: translateY(-13.8vh);
+              transform: translateY(-13.8vh);
+    }
+  }
+  @keyframes animate {
+    0% {
+      -webkit-transform: translateY(0.5vh);
+              transform: translateY(0.5vh);
+    }
+    5% {
+      -webkit-transform: translateY(-0.5vh);
+              transform: translateY(-0.5vh);
+    }
+    10%, 25% {
+      -webkit-transform: translateY(0px);
+              transform: translateY(0px);
+    }
+    30% {
+      -webkit-transform: translateY(-5.1vh);
+              transform: translateY(-5.1vh);
+    }
+    35%, 60% {
+      -webkit-transform: translateY(-4.6vh);
+              transform: translateY(-4.6vh);
+    }
+    65% {
+      -webkit-transform: translateY(-10.1vh);
+              transform: translateY(-10.1vh);
+    }
+    70%, 95% {
+      -webkit-transform: translateY(-9.2vh);
+              transform: translateY(-9.2vh);
+    }
+    100% {
+      -webkit-transform: translateY(-13.8vh);
+              transform: translateY(-13.8vh);
+    }
+  }
+  .icons {
+    position: absolute;
+    top: 60%;
+    left: 0;
+    -webkit-transform: translateX(-130px);
+            transform: translateX(-130px);
+    -webkit-transform: translate(-130px, -50%);
+            transform: translate(-130px, -50%);
+  }
+  .icons .button-container {
+    width: 175px;
+  }
+  .icons .button-container p {
+    width: 125px;
+  }
+  .icons .button-container .icon-svg {
+    width: 50px;
+  }
+  @-webkit-keyframes out {
+    from {
+      -webkit-transform: translateX(130px);
+              transform: translateX(130px);
+    }
+    to {
+      -webkit-transform: translateX(0px);
+              transform: translateX(0px);
+    }
+  }
+  @keyframes out {
+    from {
+      -webkit-transform: translateX(130px);
+              transform: translateX(130px);
+    }
+    to {
+      -webkit-transform: translateX(0px);
+              transform: translateX(0px);
+    }
+  }
+  @-webkit-keyframes in {
+    from {
+      -webkit-transform: translateX(0px);
+              transform: translateX(0px);
+    }
+    to {
+      -webkit-transform: translateX(130px);
+              transform: translateX(130px);
+    }
+  }
+  @keyframes in {
+    from {
+      -webkit-transform: translateX(0px);
+              transform: translateX(0px);
+    }
+    to {
+      -webkit-transform: translateX(130px);
+              transform: translateX(130px);
+    }
   }
 }
 /*# sourceMappingURL=desktop.css.map */
