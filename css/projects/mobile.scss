@@ -16,8 +16,9 @@ $name-color: #ebe489;
 body {
     font: 100% $font-type;
     overflow-x:hidden;
-    background-color: $background-color;
-    height:100%;
+    background: linear-gradient(to bottom right, rgb(19, 19, 82), black);
+    display:block;
+    height:100vh;
 }
 
 // top navigation bar 
@@ -125,14 +126,16 @@ header {
         background-color: white;
     }
 }
+.logo-icon{
+    margin: 5vh;
+}
 
 .project-container{
-    border: solid white 1px;
-    height: 75vh;
+    height: 85vh;
     width: 90vw;
     top: 50%;
     left:50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%,-45%);
     position: absolute;
     overflow-x: hidden;
     overflow-y: auto;
@@ -140,11 +143,39 @@ header {
     flex-direction: column;
     align-items: center;
 
+
+}
+
+.modal-box{
+    display: none;
+    position: fixed;
+    top: 0;
+    left:0;
+    width: 100vw;
+    height: 100vh;
+    overflow: auto;
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.9); 
     p{
         color: $font-color;
-        font-size: 4vw;
+        font-size: 2vh;
         margin: 0 3vw 0 3vw;
     }
+
+}
+
+#planpacific-container{
+    display: none;
+    z-index: 1000;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo-icon{
+    min-width: 150px;
+    width: 20vw;
+    max-width: 250px;
 }
 
 .title{
@@ -155,16 +186,16 @@ header {
         color: white;
         font-size: 5vw;
     }
-    margin: 5vw 0 5vw 0;
+    margin: 2vh 0 1vh 0;
 }
 
 .description{
-    height: auto;
+    height: 45vh;
     width: 80vw;
     border: 1px solid white;
     display:flex;
     flex-direction: column;
-    margin-top: 5vw;
+    margin-top: 1vh;
     align-items: center;
 }
 .links{
@@ -175,12 +206,12 @@ header {
 
     a{
         text-decoration: none;
-        color: red;
+        color: aquamarine;
         font-size: 4vw;
     }
     button{
         background-color: black;
-        border: 1px red solid;
+        border: 1px aquamarine solid;
         padding: 1vw;
         margin-left: 3vw;
     }
@@ -191,7 +222,7 @@ header {
     flex-direction: row;
     width: 100%;
     flex-wrap: wrap;
-    margin-bottom: 5vw;
+    margin-bottom: 1vh;
 }
 
 .tech{
@@ -206,13 +237,14 @@ header {
 .pp-carousel{
     border: 1px solid white;
     width: 80vw;
-    margin-top: 5vw;
+    margin-top: 3vh;
+    height: 45vh;
 }
 
  .slideshow-container, .video-container{
     width: 79vw;
     position: relative;
-    height: 80vw;
+    height: 45vh;
     img, video{
         position:absolute;
         top: 50%;
@@ -222,7 +254,7 @@ header {
         object-fit: contain;
         height:auto;
         width:100%;
-        max-height: 80vw;
+        max-height: 44vh;
     }
  }
 
@@ -270,9 +302,85 @@ header {
     stroke: #fff;
     stroke-width: 20px;
   }
-.icons{
-    display: none;
+  .icons{
+    position: absolute;
+    bottom: 10%;
+    left: 0;
+    transform: translateX(-105px);
+    display: flex;
+    flex-direction: column;
+    button{
+        border: 1px solid aquamarine;
+        border-radius: 5px;
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        background-color: rgba(0,0,0,0.75);
+        animation-name: out;
+        animation-duration: 0.5s;
+    }
+    button:hover{
+        cursor:pointer;
+        animation-name: in;
+        animation-fill-mode: forwards;
+        animation-duration: 0.5s;
+        animation-play-state: running;
+    }
+    @keyframes out{
+        from{transform:translateX(105px);}
+        to{transform:translateX(0px);}
+    }
+    @keyframes in{
+        from {transform: translateX(0px);}
+        to {transform: translateX(105px);}
+    }
+    .button-container{
+        position: relative;
+        width: 140px;
+        p{
+            color: $font-color;
+            margin-left: 5px;
+            width: 100px;
+            left: 0;
+        }
+        svg{
+            right: 0;
+        }
+    }
+    .icon-svg{
+        stroke: white;
+        fill-opacity: 0;
+        stroke-linejoin: round;
+        fill-rule: evenodd;
+        width: 40px;
+    }
+    button:hover > .icon-svg{
+        stroke-dasharray: 10; 
+        stroke-dashoffset: 100;
+        animation: move 4s linear infinite; 
+        stroke: rgb(108, 208, 208);
+    }
+
+    @keyframes move{
+        100% {
+            stroke-dashoffset: 0;
+        }
+    }
+
 }
+
+.cls-2{
+    stroke-width: 28px;
+}
+.cls-3{
+    stroke-width: 12px;
+}
+.cls-4{
+    stroke-width: 18px;
+}
+
 @media screen and (max-height: 450px){
     header{
         .logo-container{
@@ -293,9 +401,9 @@ header {
     }
 
     .project-container{
-        height: 60vh;
+        height: 90vh;
         width: 80vw;
-        transform: translate(-50%,-40%);
+        transform: translate(-50%,-50%);
         p{
             font-size: 4vh;
         }
@@ -342,5 +450,6 @@ header {
             max-height: 65vh;
         }
     }
+
 
 }

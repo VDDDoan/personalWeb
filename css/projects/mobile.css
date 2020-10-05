@@ -8,8 +8,10 @@
 body {
   font: 100% Helvetica, san-serif;
   overflow-x: hidden;
-  background-color: #161616;
-  height: 100%;
+  background: -webkit-gradient(linear, left top, right bottom, from(#131352), to(black));
+  background: linear-gradient(to bottom right, #131352, black);
+  display: block;
+  height: 100vh;
 }
 
 header {
@@ -167,14 +169,17 @@ header .toggle .line3 {
   background-color: white;
 }
 
+.logo-icon {
+  margin: 5vh;
+}
+
 .project-container {
-  border: solid white 1px;
-  height: 75vh;
+  height: 85vh;
   width: 90vw;
   top: 50%;
   left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -45%);
+          transform: translate(-50%, -45%);
   position: absolute;
   overflow-x: hidden;
   overflow-y: auto;
@@ -190,16 +195,49 @@ header .toggle .line3 {
           align-items: center;
 }
 
-.project-container p {
+.modal-box {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: auto;
+  background-color: black;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+.modal-box p {
   color: #d8d8d8;
-  font-size: 4vw;
+  font-size: 2vh;
   margin: 0 3vw 0 3vw;
+}
+
+#planpacific-container {
+  display: none;
+  z-index: 1000;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.logo-icon {
+  min-width: 150px;
+  width: 20vw;
+  max-width: 250px;
 }
 
 .title {
   color: white;
   font-size: 5vw;
-  margin: 5vw 0 5vw 0;
+  margin: 2vh 0 1vh 0;
 }
 
 .title a {
@@ -209,7 +247,7 @@ header .toggle .line3 {
 }
 
 .description {
-  height: auto;
+  height: 45vh;
   width: 80vw;
   border: 1px solid white;
   display: -webkit-box;
@@ -219,7 +257,7 @@ header .toggle .line3 {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  margin-top: 5vw;
+  margin-top: 1vh;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -240,13 +278,13 @@ header .toggle .line3 {
 
 .links a {
   text-decoration: none;
-  color: red;
+  color: aquamarine;
   font-size: 4vw;
 }
 
 .links button {
   background-color: black;
-  border: 1px red solid;
+  border: 1px aquamarine solid;
   padding: 1vw;
   margin-left: 3vw;
 }
@@ -262,7 +300,7 @@ header .toggle .line3 {
   width: 100%;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  margin-bottom: 5vw;
+  margin-bottom: 1vh;
 }
 
 .tech {
@@ -277,13 +315,14 @@ header .toggle .line3 {
 .pp-carousel {
   border: 1px solid white;
   width: 80vw;
-  margin-top: 5vw;
+  margin-top: 3vh;
+  height: 45vh;
 }
 
 .slideshow-container, .video-container {
   width: 79vw;
   position: relative;
-  height: 80vw;
+  height: 45vh;
 }
 
 .slideshow-container img, .slideshow-container video, .video-container img, .video-container video {
@@ -297,7 +336,7 @@ header .toggle .line3 {
      object-fit: contain;
   height: auto;
   width: 100%;
-  max-height: 80vw;
+  max-height: 44vh;
 }
 
 .slides {
@@ -365,7 +404,154 @@ header .toggle .line3 {
 }
 
 .icons {
-  display: none;
+  position: absolute;
+  bottom: 10%;
+  left: 0;
+  -webkit-transform: translateX(-105px);
+          transform: translateX(-105px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.icons button {
+  border: 1px solid aquamarine;
+  border-radius: 5px;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-color: rgba(0, 0, 0, 0.75);
+  -webkit-animation-name: out;
+          animation-name: out;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+}
+
+.icons button:hover {
+  cursor: pointer;
+  -webkit-animation-name: in;
+          animation-name: in;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-play-state: running;
+          animation-play-state: running;
+}
+
+@-webkit-keyframes out {
+  from {
+    -webkit-transform: translateX(105px);
+            transform: translateX(105px);
+  }
+  to {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+}
+
+@keyframes out {
+  from {
+    -webkit-transform: translateX(105px);
+            transform: translateX(105px);
+  }
+  to {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+}
+
+@-webkit-keyframes in {
+  from {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+  to {
+    -webkit-transform: translateX(105px);
+            transform: translateX(105px);
+  }
+}
+
+@keyframes in {
+  from {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+  to {
+    -webkit-transform: translateX(105px);
+            transform: translateX(105px);
+  }
+}
+
+.icons .button-container {
+  position: relative;
+  width: 140px;
+}
+
+.icons .button-container p {
+  color: #d8d8d8;
+  margin-left: 5px;
+  width: 100px;
+  left: 0;
+}
+
+.icons .button-container svg {
+  right: 0;
+}
+
+.icons .icon-svg {
+  stroke: white;
+  fill-opacity: 0;
+  stroke-linejoin: round;
+  fill-rule: evenodd;
+  width: 40px;
+}
+
+.icons button:hover > .icon-svg {
+  stroke-dasharray: 10;
+  stroke-dashoffset: 100;
+  -webkit-animation: move 4s linear infinite;
+          animation: move 4s linear infinite;
+  stroke: #6cd0d0;
+}
+
+@-webkit-keyframes move {
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes move {
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+.cls-2 {
+  stroke-width: 28px;
+}
+
+.cls-3 {
+  stroke-width: 12px;
+}
+
+.cls-4 {
+  stroke-width: 18px;
 }
 
 @media screen and (max-height: 450px) {
@@ -383,10 +569,10 @@ header .toggle .line3 {
     font-size: 5.25vh;
   }
   .project-container {
-    height: 60vh;
+    height: 90vh;
     width: 80vw;
-    -webkit-transform: translate(-50%, -40%);
-            transform: translate(-50%, -40%);
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
   }
   .project-container p {
     font-size: 4vh;

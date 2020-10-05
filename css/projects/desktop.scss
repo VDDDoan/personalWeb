@@ -20,15 +20,18 @@ $name-color: #ebe489;
     }
 
     .project-container{
-        height:40vw;
-        width: 70vw;
-        max-width: 910px;
-        max-height: 550px;
-        transform: translate(-50%,-53%);
         p{
             font-size: clamp(8px, 1.5vw, 15px);
             margin: 0 0.75vw 0 0.75vw;
         }
+    }
+
+    .modal-box{
+        height:40vw;
+        width: 70vw;
+        max-width: 910px;
+        max-height: 550px;
+        transform: translate(-50%,-50%);
     }
 
     .links{
@@ -93,36 +96,28 @@ $name-color: #ebe489;
 
     .icons{
         position: absolute;
+        top: 60%;
         left: 0;
-        bottom: 0;
-        transform: translate(0,-20%);
-        display: flex;
-        flex-direction: column;
-        justify-content: space-evenly;
-        align-items: center;
-
-        .icon-svg{
-            width: 4.5vw;
-            max-width: 45px;
-            stroke: white;
-            fill-opacity: 0;
-            stroke-linejoin: round;
-            fill-rule: evenodd;
-            margin: 5px 0 5px 45px;
-        }
-        .icon-svg:hover{
-            stroke-dasharray: 10; 
-            stroke-dashoffset: 100;
-            animation: move 2s linear infinite; 
-            stroke: $name-color
-        }
-
-        @keyframes move{
-            100% {
-                stroke-dashoffset: 0;
+        transform: translateX(-130px);
+        transform: translate(-130px, -50%);
+        .button-container{
+            width: 175px;
+            p{
+                width: 125px;
+            }
+            .icon-svg{
+                width: 50px;
             }
         }
 
+        @keyframes out{
+            from{transform:translateX(130px);}
+            to{transform:translateX(0px);}
+        }
+        @keyframes in{
+            from {transform: translateX(0px);}
+            to {transform: translateX(130px);}
+        }
     }
 
     .cls-2{

@@ -214,7 +214,7 @@ header .toggle .line3 {
 }
 
 .body-container .name .cls-1 {
-  stroke: #dd0000;
+  stroke: aquamarine;
   stroke-linejoin: round;
   stroke-width: 13px;
   fill-rule: evenodd;
@@ -272,7 +272,7 @@ header .toggle .line3 {
   height: auto;
   width: auto;
   text-align: left;
-  color: #e0b25c;
+  color: aquamarine;
   -webkit-animation: animate 7s linear infinite;
           animation: animate 7s linear infinite;
   -webkit-animation-delay: 2s;
@@ -390,7 +390,7 @@ header .toggle .line3 {
     fill-opacity: 0;
   }
   to {
-    fill: #dd0000;
+    fill: aquamarine;
     fill-opacity: 1;
   }
 }
@@ -400,17 +400,31 @@ header .toggle .line3 {
     fill-opacity: 0;
   }
   to {
-    fill: #dd0000;
+    fill: aquamarine;
     fill-opacity: 1;
   }
+}
+
+.cls-10 {
+  fill: #fff;
+}
+
+.cls-10, .cls-20 {
+  fill-rule: evenodd;
+}
+
+.cls-20 {
+  fill: none;
+  stroke: #fff;
+  stroke-width: 20px;
 }
 
 .icons {
   position: absolute;
   bottom: 10%;
   left: 0;
-  -webkit-transform: translateX(-110px);
-          transform: translateX(-110px);
+  -webkit-transform: translateX(-105px);
+          transform: translateX(-105px);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -421,7 +435,7 @@ header .toggle .line3 {
 }
 
 .icons button {
-  border: 1px solid orange;
+  border: 1px solid aquamarine;
   border-radius: 5px;
   position: relative;
   display: -webkit-box;
@@ -458,8 +472,8 @@ header .toggle .line3 {
 
 @-webkit-keyframes out {
   from {
-    -webkit-transform: translateX(110px);
-            transform: translateX(110px);
+    -webkit-transform: translateX(105px);
+            transform: translateX(105px);
   }
   to {
     -webkit-transform: translateX(0px);
@@ -469,8 +483,8 @@ header .toggle .line3 {
 
 @keyframes out {
   from {
-    -webkit-transform: translateX(110px);
-            transform: translateX(110px);
+    -webkit-transform: translateX(105px);
+            transform: translateX(105px);
   }
   to {
     -webkit-transform: translateX(0px);
@@ -484,8 +498,8 @@ header .toggle .line3 {
             transform: translateX(0px);
   }
   to {
-    -webkit-transform: translateX(110px);
-            transform: translateX(110px);
+    -webkit-transform: translateX(105px);
+            transform: translateX(105px);
   }
 }
 
@@ -495,8 +509,8 @@ header .toggle .line3 {
             transform: translateX(0px);
   }
   to {
-    -webkit-transform: translateX(110px);
-            transform: translateX(110px);
+    -webkit-transform: translateX(105px);
+            transform: translateX(105px);
   }
 }
 
@@ -529,7 +543,7 @@ header .toggle .line3 {
   stroke-dashoffset: 100;
   -webkit-animation: move 4s linear infinite;
           animation: move 4s linear infinite;
-  stroke: red;
+  stroke: #6cd0d0;
 }
 
 @-webkit-keyframes move {

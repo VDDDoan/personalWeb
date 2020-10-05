@@ -71,3 +71,37 @@ function showSlides(n){
   }
   slides[slideIndex-1].style.display = "block";
 }
+
+var modal = document.getElementById("planpacific-container");
+var modal2 = document.getElementsByClassName("match-container");
+var modal3 = document.getElementsByClassName("website-container");
+
+
+// When the user clicks the button, open the modal 
+function ppcFunc() {
+  modal.style.display = "flex";
+}
+function daMatchFunc() {
+  modal2.style.display = "block";
+}
+function webFunc() {
+  modal3.style.display = "block";
+}
+
+/* When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}*/
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+  else if(event.target == modal2){
+    modal2.style.display = "none";
+  }
+  else if(event.target == modal3){
+    modal3.style.display = "none";
+  }
+}

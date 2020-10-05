@@ -12,17 +12,17 @@
   .title a {
     font-size: clamp(10px, 2vw, 28px);
   }
-  .project-container {
+  .project-container p {
+    font-size: clamp(8px, 1.5vw, 15px);
+    margin: 0 0.75vw 0 0.75vw;
+  }
+  .modal-box {
     height: 40vw;
     width: 70vw;
     max-width: 910px;
     max-height: 550px;
-    -webkit-transform: translate(-50%, -53%);
-            transform: translate(-50%, -53%);
-  }
-  .project-container p {
-    font-size: clamp(8px, 1.5vw, 15px);
-    margin: 0 0.75vw 0 0.75vw;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
   }
   .links {
     margin: 25px 0 25px 0;
@@ -89,48 +89,60 @@
   }
   .icons {
     position: absolute;
+    top: 60%;
     left: 0;
-    bottom: 0;
-    -webkit-transform: translate(0, -20%);
-            transform: translate(0, -20%);
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: space-evenly;
-        -ms-flex-pack: space-evenly;
-            justify-content: space-evenly;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -webkit-transform: translateX(-130px);
+            transform: translateX(-130px);
+    -webkit-transform: translate(-130px, -50%);
+            transform: translate(-130px, -50%);
   }
-  .icons .icon-svg {
-    width: 4.5vw;
-    max-width: 45px;
-    stroke: white;
-    fill-opacity: 0;
-    stroke-linejoin: round;
-    fill-rule: evenodd;
-    margin: 5px 0 5px 45px;
+  .icons .button-container {
+    width: 175px;
   }
-  .icons .icon-svg:hover {
-    stroke-dasharray: 10;
-    stroke-dashoffset: 100;
-    -webkit-animation: move 2s linear infinite;
-            animation: move 2s linear infinite;
-    stroke: #ebe489;
+  .icons .button-container p {
+    width: 125px;
   }
-  @-webkit-keyframes move {
-    100% {
-      stroke-dashoffset: 0;
+  .icons .button-container .icon-svg {
+    width: 50px;
+  }
+  @-webkit-keyframes out {
+    from {
+      -webkit-transform: translateX(130px);
+              transform: translateX(130px);
+    }
+    to {
+      -webkit-transform: translateX(0px);
+              transform: translateX(0px);
     }
   }
-  @keyframes move {
-    100% {
-      stroke-dashoffset: 0;
+  @keyframes out {
+    from {
+      -webkit-transform: translateX(130px);
+              transform: translateX(130px);
+    }
+    to {
+      -webkit-transform: translateX(0px);
+              transform: translateX(0px);
+    }
+  }
+  @-webkit-keyframes in {
+    from {
+      -webkit-transform: translateX(0px);
+              transform: translateX(0px);
+    }
+    to {
+      -webkit-transform: translateX(130px);
+              transform: translateX(130px);
+    }
+  }
+  @keyframes in {
+    from {
+      -webkit-transform: translateX(0px);
+              transform: translateX(0px);
+    }
+    to {
+      -webkit-transform: translateX(130px);
+              transform: translateX(130px);
     }
   }
   .cls-2 {

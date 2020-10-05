@@ -5,8 +5,8 @@ $background-color: #161616;
 $logo-color: white;
 $menu-background-color: black;
 $font-size: 1em;
-$name-color: red;
-$name-svg: rgb(221, 0, 0);
+$name-color: #ebe489;
+$name-svg:aquamarine;
 
 *{
     margin: 0;
@@ -186,7 +186,7 @@ header {
                 height: auto;
                 width: auto;
                 text-align: left;
-                color: rgb(224, 178, 92);
+                color: aquamarine;
                 animation: animate 7s linear infinite;
                 animation-delay: 2s;
             }
@@ -257,16 +257,29 @@ header {
     }
 
 }
+.cls-10 {
+    fill: #fff;
+  }
+
+  .cls-10, .cls-20 {
+    fill-rule: evenodd;
+  }
+
+  .cls-20 {
+    fill: none;
+    stroke: #fff;
+    stroke-width: 20px;
+  }
 
 .icons{
     position: absolute;
     bottom: 10%;
     left: 0;
-    transform: translateX(-110px);
+    transform: translateX(-105px);
     display: flex;
     flex-direction: column;
     button{
-        border: 1px solid orange;
+        border: 1px solid aquamarine;
         border-radius: 5px;
         position: relative;
         display: flex;
@@ -285,12 +298,12 @@ header {
         animation-play-state: running;
     }
     @keyframes out{
-        from{transform:translateX(110px);}
+        from{transform:translateX(105px);}
         to{transform:translateX(0px);}
     }
     @keyframes in{
         from {transform: translateX(0px);}
-        to {transform: translateX(110px);}
+        to {transform: translateX(105px);}
     }
     .button-container{
         position: relative;
@@ -316,7 +329,7 @@ header {
         stroke-dasharray: 10; 
         stroke-dashoffset: 100;
         animation: move 4s linear infinite; 
-        stroke: red;
+        stroke: rgb(108, 208, 208);
     }
 
     @keyframes move{
