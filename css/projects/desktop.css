@@ -12,17 +12,25 @@
   .title a {
     font-size: clamp(10px, 2vw, 28px);
   }
+  .project-container {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+  }
   .project-container p {
     font-size: clamp(8px, 1.5vw, 15px);
     margin: 0 0.75vw 0 0.75vw;
   }
-  .modal-box {
-    height: 40vw;
-    width: 70vw;
-    max-width: 910px;
-    max-height: 550px;
-    -webkit-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
+  #planpacific-container, #match-container, #website-container {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
   }
   .links {
     margin: 25px 0 25px 0;
@@ -36,24 +44,12 @@
     margin-right: 20px;
   }
   .tech-container {
-    margin: 0 0 0.5vw 1vw;
+    margin: 0 0 0.5vw 3vw;
   }
   .tech {
     font-size: clamp(5px, 1.1vw, 11px);
     padding: clamp(2px, 0.5vw, 5px);
     margin: 5px;
-  }
-  .planpacific-container, .match-container, .website-container {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-  }
-  .match-container, .website-container {
-    margin-top: 2vh;
   }
   .description, .pp-carousel {
     width: 35vw;
@@ -81,8 +77,9 @@
     max-height: 350px;
   }
   .slideshow-container img, .slideshow-container video, .video-container img, .video-container video {
-    max-height: 349px;
+    max-height: 340px;
     height: 25vw;
+    max-width: 450px;
   }
   svg {
     max-height: 350px;

@@ -30,6 +30,7 @@ header {
 // Logo styling     
     .logo-container{
         width: 100vw;
+        z-index: 100;
         img{
             width: 20%;
             max-width: 160px;
@@ -126,13 +127,10 @@ header {
         background-color: white;
     }
 }
-.logo-icon{
-    margin: 5vh;
-}
 
 .project-container{
-    height: 85vh;
-    width: 90vw;
+    height: 100vh;
+    width: 100vw;
     top: 50%;
     left:50%;
     transform: translate(-50%,-45%);
@@ -142,12 +140,11 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
-
-
+    justify-content: center;
 }
 
 .modal-box{
-    display: none;
+    display: block;
     position: fixed;
     top: 0;
     left:0;
@@ -156,16 +153,67 @@ header {
     overflow: auto;
     background-color: rgb(0,0,0); 
     background-color: rgba(0,0,0,0.9); 
+    background: linear-gradient(to bottom right, rgba(16, 16, 34, 0.8), black);
     p{
         color: $font-color;
-        font-size: 2vh;
-        margin: 0 3vw 0 3vw;
+        font-size: 1.9vh;
+        margin: 0 3vw 1vw 3vw;
     }
-
 }
+@keyframes openModal{
+    from{
+        transform: scale(0);
+    }
+    to{
+        transform: scale(1);
+    }
+}
+@keyframes closeModal{
+    from{
+        transform: scale(1);
+    }
+    to{
+        transform: scale(0);
+    }
+}
+#close {
+    transform: scale(0);
+    color: aquamarine;
+    z-index: 1001;
+    float: right;
+    font-size: 6vh;
+    font-weight: bold;
+    position: absolute;
+    top: 1%;
+    right: 2%;
+  }
+  @keyframes xAppear{
+      from{
+        transform: scale(0);
+      }
+      to{
+        transform: scale(1);
+      }
+  }
+  @keyframes xDisappear{
+    from{
+        transform: scale(1);
+    }
+    to{
+        transform: scale(0);
+    }
+}
+  
+  #close:hover,
+  #close:focus {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    cursor: pointer;
+  }
 
-#planpacific-container{
-    display: none;
+#planpacific-container, #match-container, #website-container{
+    display: flex;
+    transform: scale(0);
     z-index: 1000;
     flex-direction: column;
     justify-content: center;
@@ -173,26 +221,62 @@ header {
 }
 
 .logo-icon{
-    min-width: 150px;
+    min-width: 125px;
     width: 20vw;
-    max-width: 250px;
+    max-width: 200px;
+    margin: 5vh;
+    cursor: pointer;
+    opacity: 0;
+}
+
+@keyframes logoFade{
+    from{
+        opacity: 0;
+        transform: translateY(100px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@keyframes logoJump{
+    0%{
+        transform: translateY(0);
+    }
+    13%{
+        transform: translateY(0);
+    }
+    20%{
+        transform: translateY(-40px);
+    }
+    27%{
+        transform: translateY(0);
+    }
+    100%{
+        transform: translateY(0);
+    }
 }
 
 .title{
-    color: white;
+    color: rgb(130, 255, 255);
     font-size: 5vw;
     a{
         text-decoration:none;
-        color: white;
+        color: rgb(130, 255, 255);
         font-size: 5vw;
     }
-    margin: 2vh 0 1vh 0;
+    margin: 2vh 0 2vh 0;
+}
+.title:hover{
+    a{
+        color: white;
+    }
 }
 
 .description{
     height: 45vh;
     width: 80vw;
-    border: 1px solid white;
+    background: black;
     display:flex;
     flex-direction: column;
     margin-top: 1vh;
@@ -209,11 +293,17 @@ header {
         color: aquamarine;
         font-size: 4vw;
     }
+    a:hover{
+        color: white;
+    }
     button{
         background-color: black;
         border: 1px aquamarine solid;
         padding: 1vw;
         margin-left: 3vw;
+    }
+    button:hover{
+        border-color: white;
     }
 }
 
@@ -235,7 +325,7 @@ header {
     
 }
 .pp-carousel{
-    border: 1px solid white;
+    background-color: black;
     width: 80vw;
     margin-top: 3vh;
     height: 45vh;
@@ -397,12 +487,12 @@ header {
         a{
             font-size: 5.25vh;
         }
-        margin: 5vh 0 5vh 0;
+        margin: 3vh 0 3vh 0;
     }
 
     .project-container{
-        height: 90vh;
-        width: 80vw;
+        height: 100vh;
+        width: 100vw;
         transform: translate(-50%,-50%);
         p{
             font-size: 4vh;
@@ -410,30 +500,33 @@ header {
     }
 
     .links{
+        margin: 1vw 2vw 1vw 2vw;
         a{
             font-size: 4vh;
         }
     }
 
     .tech-container{
-        margin: 0 0 5vh 0;
+        margin: 0 0 1vh 0;
     }
 
     .tech{
-        font-size: 3vh;
+        font-size: 2.5vh;
     }
 
-    .planpacific-container, .match-container, .website-container{
-        display: flex;
+    #planpacific-container, #match-container, #website-container{
         flex-direction: row;
     }
 
-    .match-container, .website-container{
-        margin-top:2vh;
+    .modal-box{
+        p{
+            font-size: 1.8vw;
+        }
     }
 
     .description, .pp-carousel{
-        width: 40vw;
+        width: 47.5vw;
+        height: 80vh;
         margin-top: 0;
     }
 
@@ -444,10 +537,11 @@ header {
     }
 
     .slideshow-container, .video-container{
-        width: 39vw;
-        height: 40vw;
+        width: 47.5vw;
+        height: 80vh;
         img,video{
-            max-height: 65vh;
+            max-height: 75vh;
+            max-width: 47vw;
         }
     }
 

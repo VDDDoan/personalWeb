@@ -39,78 +39,11 @@
             </div>
         </header>
         <section class="project-container">
-            <div><img class="logo-icon" onclick="ppcFunc()"src="images/planpacific/PPC_White_Orange.png"></div>
-            
-            <div><img class="logo-icon" onclick="daMatchFunc()"src="images/findDaMatch.png"></div>
-            <div class="match-container, modal-box">
-                <div class="description">
-                    <div class="title">Find DaMatch</div>
-                    <div class="tech-container">
-                        <div class="tech">Android Studio</div>
-                        <div class="tech">Java</div>
-                        <div class="tech">Gradle</div>
-                        <div class="tech">Gitlab</div>
-                        <div class="tech">JUnit 5</div>
-                        <div class="tech">Git</div>
-                    </div>
-                    <div>
-                        <p>
-                            Find DaMatch is a game developed by four students as a school group project. The game is a digital, single player, version of Spot It. 
-                            The user must tap on the image that is found on both cards. Find DaMatch has several image sets, and gives the user the option of using custom image sets eithe from Flickr or directly from their phone.
-                            The user may change the difficulty which causes images to be rotated and/or resized.
-                            The project was given to us in iterations to simulate an agile development cycle, where each iteration was done in sprints. 
-                            Each student took turns in various Scrum roles such as the team leader, product owner, and repo manager. 
-                        </p>
-                    </div>
-                    <div class="links">
-                        <button class="github-link"><a href="https://github.com/VDDDoan/findDaMatch"> &lt;/&gt;Code</a></button>
-                    </div>
-                </div>
-                <div class="pp-carousel">
-                    <div class="video-container">
-                        <video controls>
-                            <source src="video/finddamatch.webm" type="video/webm">
-                        </video>
-                    </div>
-                </div>
-            </div>
+            <div><img class="logo-icon" onclick="ppcFunc()"src="images/planpacific/PPC_White_Orange.png"></div> 
+            <div><img class="logo-icon" onclick="daMatchFunc()"src="images/findDaMatch.png"></div>   
             <div><img class="logo-icon" onclick="webFunc()" src="images/logo.png"></div>
-            <div class="website-container, modal-box">
-                <div class="description">
-                    <div class="title"><a href="https://www.realdaviddoan.com">Portfolio</a></div>
-                    <div class="tech-container">
-                        <div class="tech">HTML</div>
-                        <div class="tech">CSS3</div>
-                        <div class="tech">Javascript</div>
-                        <div class="tech">Adobe XD</div>
-                        <div class="tech">Github</div>
-                        <div class="tech">Adobe Photoshop</div>
-                        <div class="tech">AWS-S3</div>
-                        <div class="tech">AWS-Cloudfront</div>
-                    </div>
-                    <div>
-                        <p>
-                            This website was created to showcase my previous projects. 
-                            It was designed using Adobe XD and the name and logo SVG were created using Adobe Photoshop.
-                            The goal was to create simple navigation and pleasing aesthetics to draw you in and highlight my skills.
-                        </p>
-                    </div>
-                    <div class="links">
-                        <button class="website-link"><a href="https://www.realdaviddoan.com">Website</a></button>
-                        <button class="github-link"><a href="https://github.com/VDDDoan/personalWeb"> &lt;/&gt;Code</a></button>
-                    </div>
-                </div>
-                <div class="pp-carousel">
-                    <div class="logo-container2">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="512.5 212.5 1075 1075">
-                            <path id="D" class="cls-10" d="M1269.74,559.539c-24.75-2.812-54-4.5-88.87-4.5-73.69,0-132.19,19.125-167.63,54.563-35.434,34.875-54.559,85.5-54.559,147.375,0,61.312,19.688,105.187,53.439,136.125,33.19,30.937,83.25,47.25,153.56,47.25a700.93,700.93,0,0,0,104.06-7.875V559.539Zm-48.93,336.938c-12.94,2.812-32.07,5.062-57.38,5.062-103.5,0-154.12-56.812-153.56-146.25,0-102.375,56.81-160.875,161.44-160.875,19.12,0,37.12.563,49.5,2.813v299.25Z"/>
-                            <path id="D-2" data-name="D" class="cls-10" d="M823.75,938.875c24.75,2.813,54,4.5,88.875,4.5,73.687,0,132.185-19.125,167.625-54.563,35.44-34.874,54.56-85.5,54.56-147.374,0-61.313-19.69-105.188-53.43-136.126-33.19-30.937-83.255-47.25-153.568-47.25a700.948,700.948,0,0,0-104.062,7.876V938.875Zm48.938-336.937c12.937-2.813,32.062-5.063,57.374-5.063,103.5,0,154.128,56.813,153.558,146.25C1083.62,845.5,1026.81,904,922.188,904c-19.126,0-37.126-.562-49.5-2.812V601.938Z"/>
-                            <path class="cls-20" d="M1052.02,286c0,2.022-466.02,462.989-466.02,462.989L1047.98,1214,1514,753.033S1052.02,283.978,1052.02,286Z"/>
-                        </svg>
-                    </div>
-                </div>
-            </div>
         </section>
+        <div id="close">&times;</div>
         <div class="modal-box" id="planpacific-container">
             <div class="description">
                 <div class="title"><a href="https://www.planpacificconstruction.com">www.planpacificconstruction.com</a></div>
@@ -159,6 +92,72 @@
                     </div>
                     <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
                     <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                </div>
+            </div>
+        </div>
+        <div class="modal-box" id="match-container">
+            <div class="description">
+                <div class="title">Find DaMatch</div>
+                <div class="tech-container">
+                    <div class="tech">Android Studio</div>
+                    <div class="tech">Java</div>
+                    <div class="tech">Gitlab</div>
+                    <div class="tech">JUnit 5</div>
+                    <div class="tech">Git</div>
+                </div>
+                <div>
+                    <p>
+                        Find DaMatch is a digital, single player, version of Spot It developed by 4 students. 
+                        Find DaMatch has several image sets, and gives the user the option of using custom image sets either from Flickr or directly from their phone.
+                        The user may change the difficulty which causes images to be rotated and/or resized.
+                        The project was given to us in iterations to simulate an agile development cycle, where each iteration was done in sprints. 
+                        I experiended various Scrum roles such as the team leader, product owner, and repo manager. 
+                    </p>
+                </div>
+                <div class="links">
+                    <button class="github-link"><a href="https://github.com/VDDDoan/findDaMatch"> &lt;/&gt;Code</a></button>
+                </div>
+            </div>
+            <div class="pp-carousel">
+                <div class="video-container">
+                    <video controls>
+                        <source src="video/finddamatch.webm" type="video/webm">
+                    </video>
+                </div>
+            </div>
+        </div>
+        <div class="modal-box" id="website-container">
+            <div class="description">
+                <div class="title"><a href="https://www.realdaviddoan.com">Portfolio</a></div>
+                <div class="tech-container">
+                    <div class="tech">HTML</div>
+                    <div class="tech">CSS3</div>
+                    <div class="tech">Javascript</div>
+                    <div class="tech">Adobe XD</div>
+                    <div class="tech">Github</div>
+                    <div class="tech">Adobe Photoshop</div>
+                    <div class="tech">AWS-S3</div>
+                    <div class="tech">AWS-Cloudfront</div>
+                </div>
+                <div>
+                    <p>
+                        This website was created to showcase my previous projects. 
+                        It was designed using Adobe XD and the name and logo SVG were created using Adobe Photoshop.
+                        The goal was to create simple navigation and pleasing aesthetics to draw you in and highlight my skills.
+                    </p>
+                </div>
+                <div class="links">
+                    <button class="website-link"><a href="https://www.realdaviddoan.com">Website</a></button>
+                    <button class="github-link"><a href="https://github.com/VDDDoan/personalWeb"> &lt;/&gt;Code</a></button>
+                </div>
+            </div>
+            <div class="pp-carousel">
+                <div class="logo-container2">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="512.5 212.5 1075 1075">
+                        <path id="D" class="cls-10" d="M1269.74,559.539c-24.75-2.812-54-4.5-88.87-4.5-73.69,0-132.19,19.125-167.63,54.563-35.434,34.875-54.559,85.5-54.559,147.375,0,61.312,19.688,105.187,53.439,136.125,33.19,30.937,83.25,47.25,153.56,47.25a700.93,700.93,0,0,0,104.06-7.875V559.539Zm-48.93,336.938c-12.94,2.812-32.07,5.062-57.38,5.062-103.5,0-154.12-56.812-153.56-146.25,0-102.375,56.81-160.875,161.44-160.875,19.12,0,37.12.563,49.5,2.813v299.25Z"/>
+                        <path id="D-2" data-name="D" class="cls-10" d="M823.75,938.875c24.75,2.813,54,4.5,88.875,4.5,73.687,0,132.185-19.125,167.625-54.563,35.44-34.874,54.56-85.5,54.56-147.374,0-61.313-19.69-105.188-53.43-136.126-33.19-30.937-83.255-47.25-153.568-47.25a700.948,700.948,0,0,0-104.062,7.876V938.875Zm48.938-336.937c12.937-2.813,32.062-5.063,57.374-5.063,103.5,0,154.128,56.813,153.558,146.25C1083.62,845.5,1026.81,904,922.188,904c-19.126,0-37.126-.562-49.5-2.812V601.938Z"/>
+                        <path class="cls-20" d="M1052.02,286c0,2.022-466.02,462.989-466.02,462.989L1047.98,1214,1514,753.033S1052.02,283.978,1052.02,286Z"/>
+                    </svg>
                 </div>
             </div>
         </div>

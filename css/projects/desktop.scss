@@ -20,18 +20,16 @@ $name-color: #ebe489;
     }
 
     .project-container{
+        flex-direction: row;
+        flex-wrap: wrap;
+        transform: translate(-50%,-50%);
         p{
             font-size: clamp(8px, 1.5vw, 15px);
             margin: 0 0.75vw 0 0.75vw;
         }
     }
-
-    .modal-box{
-        height:40vw;
-        width: 70vw;
-        max-width: 910px;
-        max-height: 550px;
-        transform: translate(-50%,-50%);
+    #planpacific-container, #match-container, #website-container{
+        flex-direction: row;
     }
 
     .links{
@@ -47,7 +45,7 @@ $name-color: #ebe489;
     }
 
     .tech-container{
-        margin: 0 0 0.5vw 1vw;
+        margin: 0 0 0.5vw 3vw;
        
     }
 
@@ -57,14 +55,6 @@ $name-color: #ebe489;
         margin: 5px;
     }
 
-    .planpacific-container, .match-container, .website-container{
-        display: flex;
-        flex-direction: row;
-    }
-
-    .match-container, .website-container{
-        margin-top:2vh;
-    }
 
     .description, .pp-carousel{
         width: 35vw;
@@ -86,8 +76,9 @@ $name-color: #ebe489;
         height: 40vw;
         max-height: 350px;
         img,video{
-            max-height: 349px;
+            max-height: 340px;
             height: 25vw;
+            max-width: 450px;
         }
     }
     svg{

@@ -13,7 +13,7 @@ const navSlide = () => {
                 link.style.animation ='';
             }
             else {
-                link.style.animation = `navLinkFade 0.5s ease forwards ${index / 7 + 0.5}s`;
+                link.style.animation = `navLinkFade 0.5s ease forwards ${index / 6 + 0.6}s`;
             }
         });
         //burger animation
@@ -29,11 +29,15 @@ var slideIndex = 1;
 var myTimer;
 
 var slideshowContainer;
+const logos = document.querySelectorAll('.logo-icon')
 
 window.addEventListener("load",function() {
     showSlides(slideIndex);
     myTimer = setInterval(function(){plusSlides(1)}, 4000);
-  
+    logos.forEach((logo, index)=>{
+      logo.style.animation = `logoFade 1s ease forwards ${index / 3 + 0.7}s, logoJump 4s ${index * 1.1 + 3}s infinite`;
+    });
+
 })
 
 // NEXT AND PREVIOUS CONTROL
@@ -73,35 +77,44 @@ function showSlides(n){
 }
 
 var modal = document.getElementById("planpacific-container");
-var modal2 = document.getElementsByClassName("match-container");
-var modal3 = document.getElementsByClassName("website-container");
+var modal2 = document.getElementById("match-container");
+var modal3 = document.getElementById("website-container");
+var closeModal = document.getElementById("close");
 
 
 // When the user clicks the button, open the modal 
 function ppcFunc() {
-  modal.style.display = "flex";
+  modal.style.animation = `openModal 0.2s forwards`;
+  closeModal.style.animation = `xAppear 0.2s forwards`;
 }
 function daMatchFunc() {
-  modal2.style.display = "block";
+  modal2.style.animation = `openModal 0.2s forwards`;
+  closeModal.style.animation = `xAppear 0.2s forwards`;
 }
 function webFunc() {
-  modal3.style.display = "block";
+  modal3.style.animation = `openModal 0.2s forwards`;
+  closeModal.style.animation = `xAppear 0.2s forwards`;
 }
 
-/* When the user clicks on <span> (x), close the modal
-span.onclick = function() {
-  modal.style.display = "none";
-}*/
+closeModal.onclick = function closeAll(){
+  modal.style.animation = `closeModal 0.2s forwards`;
+  modal2.style.animation = `closeModal 0.2s forwards`;
+  modal3.style.animation = `closeModal 0.2s forwards`;
+  closeModal.style.animation = `xDisappear 0.2s forwards`;
+}
 
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function(event) {
   if (event.target == modal) {
-    modal.style.display = "none";
+    modal.style.animation = `closeModal 0.2s forwards`;
+    closeModal.style.animation = `xDisappear 0.2s forwards`;
   }
   else if(event.target == modal2){
-    modal2.style.display = "none";
+    modal2.style.animation = `closeModal 0.2s forwards`;
+    closeModal.style.animation = `xDisappear 0.2s forwards`;
   }
   else if(event.target == modal3){
-    modal3.style.display = "none";
+    modal3.style.animation = `closeModal 0.2s forwards`;
+    closeModal.style.animation = `xDisappear 0.2s forwards`;
   }
 }
