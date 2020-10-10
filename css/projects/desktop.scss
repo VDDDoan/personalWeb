@@ -15,8 +15,10 @@ $name-color: #ebe489;
         font-size: clamp(10px, 2vw, 30px);
         a{
             font-size: clamp(10px, 2vw, 28px);
+            margin: 0;
         }
         margin: 10px 0 10px 0;
+        text-align: center;
     }
 
     .project-container{
@@ -25,7 +27,7 @@ $name-color: #ebe489;
         transform: translate(-50%,-50%);
         p{
             font-size: clamp(8px, 1.5vw, 15px);
-            margin: 0 0.75vw 0 0.75vw;
+            margin: 0;
         }
     }
     #planpacific-container, #match-container, #website-container{
@@ -45,7 +47,11 @@ $name-color: #ebe489;
     }
 
     .tech-container{
-        margin: 0 0 0.5vw 3vw;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: 0 0 2vh 0;
        
     }
 
@@ -57,8 +63,8 @@ $name-color: #ebe489;
 
 
     .description, .pp-carousel{
-        width: 35vw;
-        max-width: 455px;
+        width: 40vw;
+        max-width: 800px;
         margin-top: 0;
     }
 
@@ -66,23 +72,20 @@ $name-color: #ebe489;
         display: flex;
         flex-direction: column;
         justify-content: center;
-        width: 35vw;
-        max-width: 455px;
     }
 
     .slideshow-container, .video-container{
-        width: 35vw;
-        max-width: 455px;
+        width: 40vw;
+        max-width: 800px;
         height: 40vw;
-        max-height: 350px;
+        max-height: 500px;
         img,video{
-            max-height: 340px;
-            height: 25vw;
-            max-width: 450px;
+            width: 40vw;
+            max-width: 800px;
         }
     }
     svg{
-        max-height: 350px;
+        max-height: 500px;
     }
 
     .icons{
